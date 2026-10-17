@@ -44,7 +44,7 @@ Su GitHub lo fa da solo ogni lunedì il workflow [`update-steam.yml`](.github/wo
 
 ## Pubblicarla online (gratis)
 
-Per installarla sul telefono la pagina deve essere online in https. Con GitHub Pages: in **Settings → Pages** scegliete "GitHub Actions" come sorgente. Il workflow [`pages.yml`](.github/workflows/pages.yml) pubblica il ramo `main` a ogni modifica e dopo ogni aggiornamento dei dati Steam. Il link da aprire sul telefono sarà `https://<utente>.github.io/app-attempatoni/`.
+Per installarla sul telefono la pagina deve essere online in https. Con GitHub Pages: in **Settings → Pages** scegliete "GitHub Actions" come sorgente. Il workflow [`pages.yml`](.github/workflows/pages.yml) pubblica il ramo predefinito a ogni modifica e dopo ogni aggiornamento dei dati Steam. Il link da aprire sul telefono sarà `https://<utente>.github.io/app-attempatoni/`.
 
 Sul computer, per provarla: `npm start` e aprite http://localhost:8080.
 
