@@ -2,42 +2,34 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Serata Attempatoni</title>
   <meta name="description" content="Trova il gioco cross-play PC/Xbox giusto per il vostro gruppo e organizza la serata settimanale.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <meta name="theme-color" content="#2f7d4f">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Attempatoni">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">
-      <span class="logo">🎮</span>
-      <div>
-        <h1 id="group-title">Serata Attempatoni</h1>
-        <p class="tagline">Un gioco per tutti, cross-play PC + Xbox, una sera a settimana</p>
-      </div>
-    </div>
-    <label class="whoami">
-      <span>Io sono</span>
-      <select id="whoami"></select>
-    </label>
+    <span class="logo" aria-hidden="true">🎮</span>
+    <h1 id="group-title">Serata Attempatoni</h1>
   </header>
 
-  <nav class="tabs" role="tablist">
-    <button role="tab" data-tab="gruppo">👥 Gruppo</button>
-    <button role="tab" data-tab="catalogo">🗳️ Vota i giochi</button>
-    <button role="tab" data-tab="consigli">🏆 Consigliati</button>
-    <button role="tab" data-tab="serata">📅 Serata</button>
-    <button role="tab" data-tab="condividi">🔗 Condividi</button>
-  </nav>
-
-  <div id="banner"></div>
   <main id="view"></main>
 
-  <footer class="foot">
-    <span id="steam-status"></span>
-    · Catalogo curato: cross-play e Game Pass cambiano nel tempo, controllate la pagina del gioco prima di comprare.
-  </footer>
+  <nav class="tabs" aria-label="Sezioni">
+    <button data-tab="gruppo"><span>👥</span>Gruppo</button>
+    <button data-tab="vota"><span>🗳️</span>Vota</button>
+    <button data-tab="consigli"><span>🏆</span>Classifica</button>
+    <button data-tab="serata"><span>📅</span>Serata</button>
+    <button data-tab="altro"><span>⚙️</span>Altro</button>
+  </nav>
 
   <div id="toast" role="status" aria-live="polite"></div>
 
