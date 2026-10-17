@@ -1,0 +1,12 @@
+{
+  "name": "app-attempatoni",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trova un gioco cross-play PC/Xbox per il gruppo e organizza la serata settimanale",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "update-steam": "node scripts/update-steam.mjs",
+    "start": "npx --yes http-server -c-1 -p 8080 ."
+  },
+  "engines": { "node": ">=18" }
+}

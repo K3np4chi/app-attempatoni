@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Serata Attempatoni</title>
+  <meta name="description" content="Trova il gioco cross-play PC/Xbox giusto per il vostro gruppo e organizza la serata settimanale.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🎮</span>
+      <div>
+        <h1 id="group-title">Serata Attempatoni</h1>
+        <p class="tagline">Un gioco per tutti, cross-play PC + Xbox, una sera a settimana</p>
+      </div>
+    </div>
+    <label class="whoami">
+      <span>Io sono</span>
+      <select id="whoami"></select>
+    </label>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="gruppo">👥 Gruppo</button>
+    <button role="tab" data-tab="catalogo">🗳️ Vota i giochi</button>
+    <button role="tab" data-tab="consigli">🏆 Consigliati</button>
+    <button role="tab" data-tab="serata">📅 Serata</button>
+    <button role="tab" data-tab="condividi">🔗 Condividi</button>
+  </nav>
+
+  <div id="banner"></div>
+  <main id="view"></main>
+
+  <footer class="foot">
+    <span id="steam-status"></span>
+    · Catalogo curato: cross-play e Game Pass cambiano nel tempo, controllate la pagina del gioco prima di comprare.
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/games.js"></script>
+  <script src="data/steam-data.js"></script>
+  <script src="js/scoring.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
