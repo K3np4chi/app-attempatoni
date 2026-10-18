@@ -4,7 +4,7 @@
   "private": true,
   "description": "Trova un gioco cross-play PC/Xbox per il gruppo e organizza la serata settimanale",
   "scripts": {
-    "test": "node --test tests/*.test.js",
+    "test": "node --test tests/*.test.js tests/*.test.mjs",
     "update-steam": "node scripts/update-steam.mjs",
     "start": "npx --yes http-server -c-1 -p 8080 ."
   },

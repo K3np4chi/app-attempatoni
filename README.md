@@ -28,6 +28,28 @@ Per ogni giocatore il gioco prende un punteggio 0-100 da: affinità con i generi
 
 Il punteggio di gruppo è **60% media + 40% del giocatore meno contento**: vince il gioco che va bene a tutti, non quello che entusiasma tre e annoia due. Un 🚫 esclude il gioco. Sono esclusi anche i giochi dove non ci state tutti nella stessa partita (attivabili con "Includi giochi dove dovete dividervi"). I giochi fatti nelle ultime due serate scendono un po' per variare.
 
+## Sondaggio Telegram della domenica
+
+Ogni domenica sera un bot pubblica nel gruppo Telegram il sondaggio **"in quali sere ci sei questa settimana?"**, con le sere da lunedì a domenica (con la data) più "❌ Questa settimana salto". Si possono scegliere più sere e il voto non è anonimo, così si vede subito quale sera va bene a tutti. Se il bot è amministratore del gruppo, fissa il sondaggio in alto.
+
+Lo pubblica GitHub Actions con il workflow [`telegram-poll.yml`](.github/workflows/telegram-poll.yml): nessun server da tenere acceso.
+
+**Configurazione (una volta sola):**
+1. Su Telegram apri **@BotFather**, scrivi `/newbot`, scegli nome e username: ti dà il **token** del bot.
+2. Aggiungi il bot al gruppo (meglio come amministratore, così può fissare il sondaggio) e scrivi un messaggio qualsiasi nel gruppo.
+3. Su GitHub: **Settings → Secrets and variables → Actions → New repository secret**, nome `TELEGRAM_BOT_TOKEN`, valore il token.
+4. Entro 24 ore dal punto 2: **Actions → Sondaggio Telegram della settimana → Run workflow**. Il sondaggio arriva nel gruppo e nel registro dell'esecuzione trovi l'id del gruppo: salvalo nella scheda **Variables** come `TELEGRAM_CHAT_ID`.
+
+**Variabili facoltative** (Settings → Secrets and variables → Actions → Variables):
+
+| Variabile | Esempio | Predefinito |
+|---|---|---|
+| `SERATE` | `lun,mar,gio,ven` | tutte le sere |
+| `ORARIO` | `22:00` | `21:30` |
+| `GIOCO` | `Sea of Thieves` | `Sea of Thieves` |
+
+GitHub esegue le automazioni programmate in orario UTC: il sondaggio arriva verso le 20:15 con l'ora legale e verso le 19:15 con l'ora solare (a volte con qualche minuto di ritardo).
+
 ## Dati da Steam
 
 Il catalogo è curato a mano in [`js/games.js`](js/games.js), perché Steam non dice se il cross-play include Xbox. Lo script [`scripts/update-steam.mjs`](scripts/update-steam.mjs) interroga lo store Steam (nessuna chiave API) e scrive [`data/steam-data.js`](data/steam-data.js) con:
