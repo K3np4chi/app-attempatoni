@@ -28,27 +28,28 @@ Per ogni giocatore il gioco prende un punteggio 0-100 da: affinità con i generi
 
 Il punteggio di gruppo è **60% media + 40% del giocatore meno contento**: vince il gioco che va bene a tutti, non quello che entusiasma tre e annoia due. Un 🚫 esclude il gioco. Sono esclusi anche i giochi dove non ci state tutti nella stessa partita (attivabili con "Includi giochi dove dovete dividervi"). I giochi fatti nelle ultime due serate scendono un po' per variare.
 
-## Sondaggio Telegram della domenica
+## Bot Telegram: sondaggio "chi c'è?"
 
-Ogni domenica sera un bot pubblica nel gruppo Telegram il sondaggio **"in quali sere ci sei questa settimana?"**, con le sere da lunedì a domenica (con la data) più "❌ Questa settimana salto". Si possono scegliere più sere e il voto non è anonimo, così si vede subito quale sera va bene a tutti. Se il bot è amministratore del gruppo, fissa il sondaggio in alto.
+Nel gruppo Telegram qualcuno scrive **`/sondaggio`** e il bot pubblica il sondaggio con le sere dei 7 giorni successivi (con la data) più "❌ Questa settimana salto". Si possono scegliere più sere e il voto non è anonimo, così si vede subito quale sera va bene a tutti. Se il bot è amministratore del gruppo, fissa il sondaggio in alto.
 
-Lo pubblica GitHub Actions con il workflow [`telegram-poll.yml`](.github/workflows/telegram-poll.yml): nessun server da tenere acceso.
+| Comando | Cosa fa |
+|---|---|
+| `/sondaggio` | tutte le sere dei prossimi 7 giorni |
+| `/sondaggio mar gio ven` | solo quelle sere |
+| `/sondaggio 22:00` | con un orario diverso (si può combinare con le sere) |
+| `/aiuto` | elenco dei comandi |
+
+Il bot è un unico file, [`telegram-bot/worker.js`](telegram-bot/worker.js), che gira gratis su **Cloudflare Workers**: si attiva solo quando arriva un comando, niente server da tenere acceso.
 
 **Configurazione (una volta sola):**
 1. Su Telegram apri **@BotFather**, scrivi `/newbot`, scegli nome e username: ti dà il **token** del bot.
-2. Aggiungi il bot al gruppo (meglio come amministratore, così può fissare il sondaggio) e scrivi un messaggio qualsiasi nel gruppo.
-3. Su GitHub: **Settings → Secrets and variables → Actions → New repository secret**, nome `TELEGRAM_BOT_TOKEN`, valore il token.
-4. Entro 24 ore dal punto 2: **Actions → Sondaggio Telegram della settimana → Run workflow**. Il sondaggio arriva nel gruppo e nel registro dell'esecuzione trovi l'id del gruppo: salvalo nella scheda **Variables** come `TELEGRAM_CHAT_ID`.
+2. Crea un account gratuito su [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Create Worker** → dagli un nome (es. `ciurma-bot`) → **Deploy**.
+3. **Edit code**: cancella il codice di esempio, incolla tutto il contenuto di [`telegram-bot/worker.js`](https://raw.githubusercontent.com/K3np4chi/app-attempatoni/main/telegram-bot/worker.js) → **Deploy**.
+4. Nel Worker: **Settings → Variables and Secrets → Add** → tipo **Secret**, nome `TELEGRAM_BOT_TOKEN`, valore il token → **Deploy**. Facoltative, tipo *Text*: `ORARIO` (es. `22:00`) e `GIOCO`.
+5. Apri `https://ciurma-bot.<tuo-account>.workers.dev/setup`: deve comparire "✅ Bot collegato a Telegram!".
+6. Aggiungi il bot al gruppo, possibilmente come amministratore, e scrivi `/sondaggio`.
 
-**Variabili facoltative** (Settings → Secrets and variables → Actions → Variables):
-
-| Variabile | Esempio | Predefinito |
-|---|---|---|
-| `SERATE` | `lun,mar,gio,ven` | tutte le sere |
-| `ORARIO` | `22:00` | `21:30` |
-| `GIOCO` | `Sea of Thieves` | `Sea of Thieves` |
-
-GitHub esegue le automazioni programmate in orario UTC: il sondaggio arriva verso le 20:15 con l'ora legale e verso le 19:15 con l'ora solare (a volte con qualche minuto di ritardo).
+Il webhook è protetto da un codice segreto ricavato dal token: solo Telegram può inviare comandi al bot.
 
 ## Dati da Steam
 
