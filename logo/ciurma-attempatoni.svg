@@ -46,50 +46,61 @@
     <path d="M 662 728 L 706 780" stroke-width="30" stroke="#1a120c"/>
     <path d="M 662 728 L 706 780" stroke-width="18" stroke="#7a4a23"/>
     <circle cx="712" cy="788" r="15" fill="#d9a441"/>
-    <!-- bastone -->
-    <path d="M 352 785 L 690 360" stroke-width="34" stroke="#1a120c"/>
-    <path d="M 352 785 L 690 360" stroke-width="22" stroke="#8a5a2b"/>
-    <path d="M 690 360 C 712 318 780 312 790 360 C 795 385 776 398 758 390" fill="none" stroke-width="34" stroke="#1a120c"/>
-    <path d="M 690 360 C 712 318 780 312 790 360 C 795 385 776 398 758 390" fill="none" stroke-width="22" stroke="#8a5a2b"/>
-    <circle cx="352" cy="785" r="14" fill="#d9a441"/>
+    <!-- remo -->
+    <path d="M 352 785 L 668 392" stroke-width="30" stroke="#1a120c"/>
+    <path d="M 352 785 L 668 392" stroke-width="18" stroke="#8a5a2b"/>
+    <ellipse cx="702" cy="352" rx="78" ry="30" transform="rotate(-48 702 352)" fill="#a8723c"/>
+    <path d="M 668 392 L 742 306" stroke="#7a4a23" stroke-width="5"/>
+    <circle cx="352" cy="785" r="15" fill="#d9a441"/>
   </g>
 
-  <!-- teschio -->
-  <g stroke="#1a120c" stroke-width="8" stroke-linejoin="round">
+  <!-- teschio: trentenne attempato con cuffie da gamer -->
+  <g stroke="#1a120c" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
     <rect x="430" y="520" width="164" height="105" rx="34" fill="#f3e7c9"/>
     <ellipse cx="512" cy="455" rx="152" ry="140" fill="#f3e7c9"/>
     <path d="M 430 560 Q 512 590 594 560 L 594 540 L 430 540 Z" fill="#f3e7c9" stroke="none"/>
     <!-- denti -->
-    <path d="M 452 588 H 572 V 612 Q 512 622 452 612 Z" fill="#fffaf0" stroke-width="5"/>
-    <path d="M 482 590 V 616 M 512 590 V 619 M 542 590 V 616" stroke-width="5"/>
-    <!-- orbite -->
-    <ellipse cx="456" cy="468" rx="38" ry="42" fill="#1c1410" stroke="none"/>
-    <ellipse cx="568" cy="468" rx="38" ry="42" fill="#1c1410" stroke="none"/>
-    <circle cx="466" cy="458" r="7" fill="#f3e7c9" stroke="none"/>
-    <circle cx="578" cy="458" r="7" fill="#f3e7c9" stroke="none"/>
+    <path d="M 456 584 H 568 V 606 Q 512 616 456 606 Z" fill="#fffaf0" stroke-width="5"/>
+    <path d="M 484 586 V 610 M 512 586 V 612 M 540 586 V 610" stroke-width="5"/>
+    <!-- barba corta scura con i primi fili grigi -->
+    <path d="M 374 492 Q 372 600 430 640 Q 470 668 512 668 Q 554 668 594 640 Q 652 600 650 492 Q 640 560 600 574 Q 590 624 512 632 Q 434 624 424 574 Q 384 560 374 492 Z" fill="#4a3424"/>
+    <path d="M 392 524 Q 396 552 410 574 M 632 524 Q 628 552 614 574 M 538 640 Q 552 648 566 640" fill="none" stroke="#cfc8bd" stroke-width="6"/>
+    <!-- baffi corti -->
+    <path d="M 466 572 Q 512 548 558 572 Q 534 582 512 574 Q 490 582 466 572 Z" fill="#4a3424" stroke-width="5"/>
+    <!-- orbite stanche: si fa tardi la sera -->
+    <ellipse cx="456" cy="468" rx="38" ry="40" fill="#1c1410" stroke="none"/>
+    <ellipse cx="568" cy="468" rx="38" ry="40" fill="#1c1410" stroke="none"/>
+    <path d="M 418 456 Q 456 440 494 456" fill="none" stroke="#f3e7c9" stroke-width="10"/>
+    <path d="M 530 456 Q 568 440 606 456" fill="none" stroke="#f3e7c9" stroke-width="10"/>
+    <circle cx="462" cy="474" r="7" fill="#f3e7c9" stroke="none"/>
+    <circle cx="574" cy="474" r="7" fill="#f3e7c9" stroke="none"/>
+    <path d="M 424 520 Q 456 532 488 520 M 536 520 Q 568 532 600 520" fill="none" stroke="#b9a98a" stroke-width="5"/>
     <!-- naso -->
-    <path d="M 512 512 L 496 545 Q 512 554 528 545 Z" fill="#1c1410" stroke="none"/>
-    <!-- occhiali da lettura -->
-    <g fill="#ffffff" fill-opacity=".12" stroke="#d9a441" stroke-width="10">
-      <circle cx="456" cy="468" r="54"/>
-      <circle cx="568" cy="468" r="54"/>
-    </g>
-    <path d="M 500 462 Q 512 448 524 462" fill="none" stroke="#d9a441" stroke-width="9"/>
-    <path d="M 402 462 L 366 448 M 622 462 L 658 448" stroke="#d9a441" stroke-width="9" stroke-linecap="round"/>
-    <!-- baffoni -->
-    <path d="M512 560 C 480 540, 432 548, 412 582 C 402 598, 382 594, 376 578 C 380 610, 422 622, 452 602 C 477 588, 500 578, 512 582 C 524 578, 547 588, 572 602 C 602 622, 644 610, 648 578 C 642 594, 622 598, 612 582 C 592 548, 544 540, 512 560 Z" fill="#ffffff" stroke-width="6"/>
+    <path d="M 512 512 L 498 542 Q 512 550 526 542 Z" fill="#1c1410" stroke="none"/>
   </g>
 
-  <!-- tricorno -->
+  <!-- bandana -->
   <g stroke="#1a120c" stroke-width="8" stroke-linejoin="round">
-    <path d="M 330 388 Q 512 318 694 388 Q 690 330 640 312 Q 610 205 512 205 Q 414 205 384 312 Q 334 330 330 388 Z" fill="#231c2b"/>
-    <path d="M 340 380 Q 512 316 684 380" fill="none" stroke="#d9a441" stroke-width="10"/>
-    <!-- piccolo teschio sul cappello -->
-    <g transform="translate(512 282)" stroke-width="3">
-      <circle r="24" fill="#f3e7c9"/>
-      <rect x="-13" y="14" width="26" height="16" rx="5" fill="#f3e7c9"/>
-      <circle cx="-9" cy="0" r="6" fill="#1c1410" stroke="none"/>
-      <circle cx="9" cy="0" r="6" fill="#1c1410" stroke="none"/>
+    <path d="M 362 432 Q 352 304 512 300 Q 672 304 662 432 Q 512 392 362 432 Z" fill="#b3261e"/>
+    <g fill="#f3e7c9" stroke="none">
+      <circle cx="440" cy="350" r="9"/><circle cx="512" cy="330" r="9"/><circle cx="584" cy="350" r="9"/>
+      <circle cx="404" cy="400" r="8"/><circle cx="476" cy="384" r="8"/><circle cx="548" cy="384" r="8"/><circle cx="620" cy="400" r="8"/>
     </g>
+    <path d="M 650 420 Q 700 420 728 470 Q 700 462 676 448 Z" fill="#b3261e"/>
+    <path d="M 650 420 Q 708 404 752 430 Q 714 444 672 436 Z" fill="#b3261e"/>
+    <circle cx="656" cy="424" r="13" fill="#8f1d17"/>
+  </g>
+
+  <!-- cuffie da gamer con microfono -->
+  <g stroke="#1a120c" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 366 452 Q 360 262 512 262 Q 664 262 658 452" fill="none" stroke-width="30"/>
+    <path d="M 366 452 Q 360 262 512 262 Q 664 262 658 452" fill="none" stroke="#3a3f48" stroke-width="18"/>
+    <rect x="330" y="420" width="56" height="104" rx="22" fill="#3a3f48" stroke-width="8"/>
+    <rect x="638" y="420" width="56" height="104" rx="22" fill="#3a3f48" stroke-width="8"/>
+    <rect x="342" y="440" width="12" height="64" rx="6" fill="#2ec27e" stroke="none"/>
+    <rect x="670" y="440" width="12" height="64" rx="6" fill="#2ec27e" stroke="none"/>
+    <path d="M 372 510 Q 384 590 456 604" fill="none" stroke-width="16"/>
+    <path d="M 372 510 Q 384 590 456 604" fill="none" stroke="#3a3f48" stroke-width="8"/>
+    <rect x="450" y="592" width="30" height="22" rx="10" fill="#3a3f48" stroke-width="6"/>
   </g>
 </svg>
